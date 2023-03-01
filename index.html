@@ -31,7 +31,7 @@
 
         <hr>
 
-        <div id="catagoris-container" class="catagories d-flex justify-content-between bg-primary-subtle pt-3 px-2 mt-2" >
+        <div id="catagoris-container" class="catagories d-flex flex-column flex-lg-row justify-content-between bg-primary-subtle pt-3 px-2 mt-2" >
 
         </div>
 
@@ -51,7 +51,31 @@
         </section>
         <!-- allert end -->
 
-        <section>
+        <!-- different catagory start -->
+        <section class="d-flex flex-column flex-lg-row justify-content-between">
+
+            <div class="d-flex">
+
+                <p class="m-0 p-0 h6">Sort By view:</p>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected disabled>Default</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                </select>
+
+            </div>
+
+            <div class="">
+
+                <button class="btn btn-primary">
+                    Today's Pick
+                </button>
+                <button class="btn btn-outline-warning text-black">
+                    Trending
+                </button>
+                
+            </div>
 
         </section>
 
