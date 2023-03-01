@@ -46,7 +46,6 @@ const  displayData=(data,catagori)=>{
     container.innerHTML="";
 
     data.forEach(news=>{
-        console.log(news);
         container.innerHTML +=`
             <div class="card mb-3 w-full">
                 <div class="row g-0">
@@ -82,7 +81,7 @@ const  displayData=(data,catagori)=>{
 
                             <div class="">
                                 <i class="fa-solid fa-eye"></i>
-                                <span>${news.total_view}M</span>
+                                <span>${news.total_view?news.total_view:0.1}M</span>
                             </div>
 
                             <div class="">
@@ -92,11 +91,14 @@ const  displayData=(data,catagori)=>{
                                 <i class="fa-regular fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
+                                <span class="text-primary">${news.rating.number?news.rating.number:0}
                             
                             </div>
 
                             <div class="">
+                                <button class="btn btn-outline-warning text-primary">
                                 <i onclick="singleDataload('${news._id}')" class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
 
                         </div>
@@ -111,7 +113,8 @@ const  displayData=(data,catagori)=>{
 
 
 const singleDataload=(id)=>{
-    console.log(id);
+    const url = "https://openapi.programming-hero.com/api/news/${id}"
+    console.log(url);
 }
 
 
